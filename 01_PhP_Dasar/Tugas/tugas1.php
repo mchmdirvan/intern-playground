@@ -10,11 +10,7 @@
 -->
 
 <?php
-  for ($i = 1; $i <= 20; $i++) {
-      if ($i % 2 == 0) {
-          echo "$i adalah Genap\n" ;
-      } else {
-          echo "$i adalah Ganjil \n";
-      }
+  for ($i = 1; $i <= 20; $i++){
+    echo "$i adalah " . ($i % 2 == 0 ? 'Genap' : 'Ganjil') . "\n";
   }
 ?>

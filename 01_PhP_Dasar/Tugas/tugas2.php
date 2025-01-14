@@ -10,12 +10,8 @@ Contoh :
 -->
 
 <?php
- $score = [80, 75, 45, 65, 70];
-  foreach ($score as $value) {
-      if ($value >= 60) {
-          echo "Nilai anda adalah $value, selamat anda sudah lulus\n";
-      } else {
-          echo "Nilai anda adalah $value, mohon maaf anda belum lulus\n";
-      }
+  $nilai = [80, 75, 45, 65, 70];
+  foreach ( $nilai as $value){
+    echo "Nilai anda adalah $value, " . ($value >=60 ? "Selamat anda sudah lulus" : "Mohon maaf anda belum lulus") . "\n";
   }
 ?>

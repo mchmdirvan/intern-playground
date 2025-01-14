@@ -9,9 +9,10 @@ Tugas 4
  -->
 
  <?php
-    $a = 5;
-    $b = 3;
-    $t = 10;
-    $volume = 0.5 * $a * $b * $t;
-    echo "Volume dari prisma segitiga adalah $volume cm\n";
+ $a = 5;
+ $b = 3;
+ $c = 10;
+
+ $volume = 0.5 * $a * $b * $c;
+ echo "Volume dari prisma segitiga adalah $volume cm";
 ?>

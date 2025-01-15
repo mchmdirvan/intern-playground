@@ -8,5 +8,5 @@ contoh :
 -->
 
 <?php
-  //
+  //testing
 ?>

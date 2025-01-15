@@ -8,17 +8,5 @@ contoh :
 -->
 
 <?php
-  $angka = 10;
-  $count = 0;
-  for ($i = 1; $i <= $angka; $i++) {
-    echo "$i adalah i, $angka adalah angka, $count adalah count \n";  
-    if ($angka % $i == 0) {
-          $count++;
-      }
-  }
-  if ($count == 2) {
-      echo "$angka adalah bilangan prima\n";
-  } else {
-      echo "$angka bukan bilangan prima\n";
-  }
+  //
 ?>

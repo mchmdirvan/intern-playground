@@ -10,8 +10,5 @@ Contoh :
 -->
 
 <?php
-  $nilai = [80, 75, 45, 65, 70];
-  foreach ( $nilai as $value){
-    echo "Nilai anda adalah $value, " . ($value >=60 ? "Selamat anda sudah lulus" : "Mohon maaf anda belum lulus") . "\n";
-  }
+  //
 ?>

@@ -12,10 +12,6 @@ Contoh :
 <?php
   $arrays =[100,85,80,70,50,0];
   foreach ($arrays as $array){ 
-      if ($array>50){
-          echo "nilai kamu $array hore kamu lulus \n";
-          } else {
-              echo "nilai kamu $array hore kamu tidak lulus \n";
-      }
+    echo "nilai kamu $array " . ($array > 50 ? "hore kamu lulus \n" : "hore kamu tidak lulus \n") ;
   }
 ?>

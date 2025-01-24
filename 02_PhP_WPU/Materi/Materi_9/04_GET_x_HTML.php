@@ -1,6 +1,5 @@
 <?php
-// Associative Array
-// key-nya adalah string yang kita buat sendiri
+
 $mahasiswa = [
   [
     "nama" => "Sandhika Galih",
@@ -17,8 +16,6 @@ $mahasiswa = [
     "gambar" => "agung.webp",
   ]
 ];
-
-echo $mahasiswa[1]["email"]; //doddy@gmail.com
 ?>
 
 <!DOCTYPE html>
@@ -27,22 +24,19 @@ echo $mahasiswa[1]["email"]; //doddy@gmail.com
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Latihan 2</title>
+  <title>GET</title>
 </head>
 
 <body>
   <h1>Daftar Mahasiswa</h1>
-  <?php foreach ($mahasiswa as $mhs): ?>
-    <ul>
+  <ul>
+    <?php foreach ($mahasiswa as $mhs): ?>
       <li>
-        <img src="img/<?= $mhs["gambar"]; ?>" alt="">
+        <a
+          href="05_Get_Detail.php?nama=<?= $mhs["nama"]; ?>&nrp=<?= $mhs["nrp"]; ?>&email=<?= $mhs["email"]; ?>&jurusan=<?= $mhs["jurusan"]; ?>&gambar=<?= $mhs["gambar"]; ?>"><?= $mhs["nama"]; ?></a>
       </li>
-      <li>Nama : <?= $mhs["nama"]; ?></li>
-      <li>NRP : <?= $mhs["nrp"]; ?></li>
-      <li>Email : <?= $mhs["email"]; ?></li>
-      <li>Jurusan : <?= $mhs["jurusan"]; ?></li>
-    </ul>
-  <?php endforeach; ?>
+    <?php endforeach; ?>
+  </ul>
 </body>
 
 </html>

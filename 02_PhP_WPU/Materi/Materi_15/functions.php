@@ -19,7 +19,6 @@ function tambah($data)
   $nama = htmlspecialchars($data["nama"]);
   $email = htmlspecialchars($data["email"]);
   $jurusan = htmlspecialchars($data["jurusan"]);
-
   $gambar = upload(); // upload gambar
   if (!$gambar) {
     return false;
@@ -27,7 +26,7 @@ function tambah($data)
 
   $query = "INSERT INTO mahasiswa
               VALUES
-              ('', '$nrp', '$nama', '$email', '$jurusan', '$gambar')
+              ('', '$nama', '$nrp', '$email', '$jurusan', '$gambar')
             ";
   mysqli_query($conn, $query);
 
@@ -97,7 +96,6 @@ function ubah($data)
   $nama = htmlspecialchars($data["nama"]);
   $email = htmlspecialchars($data["email"]);
   $jurusan = htmlspecialchars($data["jurusan"]);
-
   $gambarLama = htmlspecialchars($data["gambarLama"]);
   // Check if the user uploaded a new image
   if ($_FILES['gambar']['error'] === 4) {
@@ -119,7 +117,6 @@ function ubah($data)
 
   return mysqli_affected_rows($conn);
 }
-
 function cari($keyword)
 {
   $query = "SELECT * FROM mahasiswa 

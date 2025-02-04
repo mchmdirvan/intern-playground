@@ -1,6 +1,6 @@
 <?php
 // konek ke database
-$conn = mysqli_connect("localhost", "root", "root", "playground");
+$conn = mysqli_connect("localhost", "root", "", "playground");
 
 // cek apakah tombol submit sudah ditekan atau belum
 if (isset($_POST["submit"])) {

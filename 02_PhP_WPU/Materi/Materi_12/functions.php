@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "root", "playground");
+$conn = mysqli_connect("localhost", "root", "", "playground");
 
 function query($query)
 {

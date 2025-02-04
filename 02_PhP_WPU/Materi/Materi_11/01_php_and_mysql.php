@@ -1,6 +1,6 @@
 <?php
 // koneksi ke database
-$conn = mysqli_connect("localhost", "root", "root", "playground");
+$conn = mysqli_connect("localhost", "root", "", "playground");
 
 // ambil data dari tabel mahasiswa / query data mahasiswa
 $result = mysqli_query($conn, "SELECT * FROM mahasiswa");

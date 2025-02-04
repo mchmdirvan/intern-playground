@@ -23,7 +23,7 @@ function tambah($data)
 
   $query = "INSERT INTO mahasiswa
               VALUES
-              ('', '$nrp', '$nama', '$email', '$jurusan', '$gambar')
+              ('', '$nama', '$nrp', '$email', '$jurusan', '$gambar')
             ";
   mysqli_query($conn, $query);
 

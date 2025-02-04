@@ -15,15 +15,15 @@ function query($query)
 function tambah($data)
 {
   global $conn;
-  $nrp = htmlspecialchars($data["nrp"]);
   $nama = htmlspecialchars($data["nama"]);
+  $nrp = htmlspecialchars($data["nrp"]);
   $email = htmlspecialchars($data["email"]);
   $jurusan = htmlspecialchars($data["jurusan"]);
   $gambar = htmlspecialchars($data["gambar"]);
 
   $query = "INSERT INTO mahasiswa
               VALUES
-              ('', '$nrp', '$nama', '$email', '$jurusan', '$gambar')
+              ('', '$nama', '$nrp', '$email', '$jurusan', '$gambar')
             ";
   mysqli_query($conn, $query);
 

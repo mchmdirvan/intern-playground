@@ -34,11 +34,11 @@ $mahasiswa = query('SELECT * FROM mahasiswa');
         <td><?= $i ?></td>
         <td>
           <a href="">Ubah</a> |
-          <a href="hapus.php?id<?= $row["id"]; ?>" onclick="return confirm('yakin?')">Hapus</a>
+          <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('yakin?')">Hapus</a>
         </td>
         <td> <img src="img/<?= $row["gambar"]; ?>" width="50" alt=""> </td>
         <td> <?= $row["nrp"] ?> </td>
-        <td> <?= $row["nrp"] ?> </td>
+        <td> <?= $row["nama"] ?> </td>
         <td> <?= $row["email"] ?> </td>
         <td> <?= $row["jurusan"] ?> </td>
       </tr>

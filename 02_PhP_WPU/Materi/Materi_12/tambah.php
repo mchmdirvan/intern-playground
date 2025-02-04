@@ -1,34 +1,28 @@
 <?php
-// konek ke database
-$conn = mysqli_connect("localhost", "root", "", "playground");
-
-// cek apakah tombol submit sudah ditekan atau belum
+require 'functions.php';
+// cek apakah tombol submit sudah di tekan atau belum
 if (isset($_POST["submit"])) {
-  // var_dump($_POST); // to check if the data is sent
-  $nrp = $_POST['nrp'];
-  $nama = $_POST['nama'];
-  $email = $_POST['email'];
-  $jurusan = $_POST['jurusan'];
-  $gambar = $_POST['gambar'];
-
-  // query insert data
-  $query = "INSERT INTO mahasiswa
-              VALUES
-              ('', '$nrp', '$nama', '$email', '$jurusan', '$gambar')
-            ";
-  mysqli_query($conn, $query);
 
   // cek apakah data berhasil ditambahkan atau tidak
-  // var_dump(mysqli_affected_rows($conn)); // to check if the data is added
-
-  if (mysqli_affected_rows($conn) > 0) {
-    echo "Data berhasil ditambahkan!";
+  if (tambah($_POST) > 0) {
+    echo "
+        <script>
+        alert('data berhasil ditambahkan');
+        document.location.href = 'index.php'
+        </script>
+        ";
   } else {
-    echo "Data gagal ditambahkan!";
-    echo "<br>";
-    echo mysqli_error($conn);
+    echo "
+         <script>
+        alert('data gagal ditambahkan');
+        document.location.href = 'index.php'
+        </script>
+        ";
   }
 }
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -37,36 +31,38 @@ if (isset($_POST["submit"])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tambah Data Mahasiswa</title>
+  <title>Tambah Data Mahasiswa </title>
 </head>
 
 <body>
   <h1>Tambah Data Mahasiswa</h1>
 
   <form action="" method="post">
+
     <ul>
       <li>
-        <label for="nrp">NRP: </label>
-        <input type="text" name="nrp" id="nrp" required>
-      </li>
-      <li>
-        <label for="nama">Nama: </label>
+        <label for="nama">nama :</label>
         <input type="text" name="nama" id="nama" required>
       </li>
       <li>
-        <label for="email">Email: </label>
+        <label for="nrp">nrp :</label>
+        <input type="text" name="nrp" id="nrp" required>
+      </li>
+      <li>
+        <label for="email">email :</label>
         <input type="text" name="email" id="email" required>
       </li>
       <li>
-        <label for="jurusan">Jurusan: </label>
+        <label for="jurusan">jurusan :</label>
         <input type="text" name="jurusan" id="jurusan" required>
       </li>
       <li>
-        <label for="gambar">Gambar: </label>
+        <label for="gambar">gambar :</label>
         <input type="text" name="gambar" id="gambar" required>
       </li>
+      <br>
       <li>
-        <button type="submit" name="submit">Tambah Data!</button>
+        <button typr="submit" name="submit">Tambah data</button>
       </li>
     </ul>
   </form>

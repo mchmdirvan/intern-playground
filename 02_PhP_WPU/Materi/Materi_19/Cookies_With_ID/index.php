@@ -25,7 +25,7 @@ if (isset($_POST['cari'])) {
   <a href="logout.php">Logout</a>
   <h1>Daftar Mahasiswa</h1>
   <a href="tambah.php">Tambah data mahasiswa</a>
-  <!-- <a href="tambah_with_functions.php">Tambah data mahasiswa</a> -->
+ 
 
   <form action="" method="post">
     <input type="text" name="keyword" size="40" placeholder="masukkan keyword pencarian.." autocomplete="off" autofocus>
